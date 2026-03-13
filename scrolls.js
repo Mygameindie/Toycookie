@@ -29,6 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
     'mask1',
     'bow1',
     'expression1',
+    // char4 (girl)
+    'bottomunderwear4',
+    'topunderwear4',
+    'stocking4',
+    'onepiece4',
+    'socks4',
+    'sweatshirt4',
+    'shoes4',
+    'pants4',
+    'skirt4',
+    'top4',
+    'dress4',
+    'jacket4',
+    'bunnysuitbow4',
+    'accessories4',
+    'hat4',
+    'mask4',
+    'bow4',
+    'expression4',
   ];
 
   // Build preset buttons

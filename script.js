@@ -3,6 +3,7 @@
 // This controls which clothing categories appear in the scroll bar for each character.
 const CHARACTER_GENDERS = {
   1: 'girl',  // char1 → girl
+  4: 'girl',  // char4 → girl
 };
 
 // Categories shown ONLY for girl characters (hidden for boy characters)
@@ -34,6 +35,27 @@ const jsonFiles = [
   'mask1.json',
   'bow1.json',
   'expression1.json',
+  // char4 (girl)
+  'bottomunderwear4.json',
+  'topunderwear4.json',
+  'stocking4.json',
+  'onepiece4.json',
+  'socks4.json',
+  'sweatshirt4.json',
+  'shoes4.json',
+  'pants4.json',
+  'skirt4.json',
+  'skirt4w.json',
+  'top4.json',
+  'dress4.json',
+  'dress4w.json',
+  'jacket4.json',
+  'bunnysuitbow4.json',
+  'accessories4.json',
+  'hat4.json',
+  'mask4.json',
+  'bow4.json',
+  'expression4.json',
 ];
 
 const COLORS = {
@@ -208,6 +230,14 @@ const CONFLICTS = {
   jacket1: ['bunnysuitbow1'],
   stocking1: ['socks1'], socks1: ['stocking1'],
   pants1: ['skirt1'], skirt1: ['pants1'],
+  // char4 conflicts
+  onepiece4: ['topunderwear4','bottomunderwear4'],
+  topunderwear4: ['onepiece4'], bottomunderwear4: ['onepiece4'],
+  dress4: ['top4','pants4','skirt4','sweatshirt4','bunnysuitbow4'],
+  bunnysuitbow4: ['dress4','jacket4'],
+  jacket4: ['bunnysuitbow4'],
+  stocking4: ['socks4'], socks4: ['stocking4'],
+  pants4: ['skirt4'], skirt4: ['pants4'],
 };
 
 function toggleVisibility(itemId, categoryName) {
@@ -314,7 +344,7 @@ async function setItemNamedColor(itemId, colorName) {
   const hex = COLORS[colorName] ?? null;
   await setItemColor(itemId, hex);
   // Sync wind variant
-  const m = /^((?:skirt|dress)[123]_\d+)(w?)\.png$/.exec(String(itemId));
+  const m = /^((?:skirt|dress)[1234]_\d+)(w?)\.png$/.exec(String(itemId));
   if (m) {
     const sibling = m[2] ? `${m[1]}.png` : `${m[1]}w.png`;
     if (document.getElementById(sibling)) await setItemColor(sibling, hex);
@@ -455,7 +485,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 // ===== WIND EFFECT =====
 function setWindState(on) {
   ['skirt', 'dress'].forEach(k => {
-    [1].forEach(n => {
+    [1, 4].forEach(n => {
       for (let i = 1; i <= 10; i++) {
         const normalId = `${k}${n}_${i}.png`;
         const windId   = `${k}${n}_${i}w.png`;
