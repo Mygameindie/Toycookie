@@ -1,5 +1,6 @@
 // All categories to hide before applying a preset
 const ALL_CATEGORIES = [
+  // char1 (girl)
   'bottomunderwear1',
   'topunderwear1',
   'stocking1',
@@ -21,6 +22,21 @@ const ALL_CATEGORIES = [
   'mask1',
   'bow1',
   'expression1',
+  // char2 (boy)
+  'bottomunderwear2',
+  'topunderwear2',
+  'socks2',
+  'boxers2',
+  'sweatshirt2',
+  'shoes2',
+  'pants2',
+  'top2',
+  'jacket2',
+  'bunnysuitbow2',
+  'accessories2',
+  'hat2',
+  'mask2',
+  'expression2',
 ];
 
 function showItem(itemId, categoryName) {
