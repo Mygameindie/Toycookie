@@ -1,0 +1,12 @@
+[
+    {"id": "skirt3_1w",  "src": "skirt3_1w.png",  "alt": "Skirt 3 Item 1 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_2w",  "src": "skirt3_2w.png",  "alt": "Skirt 3 Item 2 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_3w",  "src": "skirt3_3w.png",  "alt": "Skirt 3 Item 3 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_4w",  "src": "skirt3_4w.png",  "alt": "Skirt 3 Item 4 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_5w",  "src": "skirt3_5w.png",  "alt": "Skirt 3 Item 5 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_6w",  "src": "skirt3_6w.png",  "alt": "Skirt 3 Item 6 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_7w",  "src": "skirt3_7w.png",  "alt": "Skirt 3 Item 7 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_8w",  "src": "skirt3_8w.png",  "alt": "Skirt 3 Item 8 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_9w",  "src": "skirt3_9w.png",  "alt": "Skirt 3 Item 9 Wind",  "visibility": "hidden"},
+    {"id": "skirt3_10w",  "src": "skirt3_10w.png",  "alt": "Skirt 3 Item 10 Wind",  "visibility": "hidden"}
+]

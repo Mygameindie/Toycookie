@@ -3,6 +3,7 @@
 // This controls which clothing categories appear in the scroll bar for each character.
 const CHARACTER_GENDERS = {
   1: 'girl',  // char1 → girl
+  3: 'girl',  // char3 → girl
 };
 
 // Categories shown ONLY for girl characters (hidden for boy characters)
@@ -34,6 +35,27 @@ const jsonFiles = [
   'mask1.json',
   'bow1.json',
   'expression1.json',
+  // char3 (girl)
+  'bottomunderwear3.json',
+  'topunderwear3.json',
+  'stocking3.json',
+  'onepiece3.json',
+  'socks3.json',
+  'sweatshirt3.json',
+  'shoes3.json',
+  'pants3.json',
+  'skirt3.json',
+  'skirt3w.json',
+  'top3.json',
+  'dress3.json',
+  'dress3w.json',
+  'jacket3.json',
+  'bunnysuitbow3.json',
+  'accessories3.json',
+  'hat3.json',
+  'mask3.json',
+  'bow3.json',
+  'expression3.json',
 ];
 
 const COLORS = {
@@ -208,6 +230,14 @@ const CONFLICTS = {
   jacket1: ['bunnysuitbow1'],
   stocking1: ['socks1'], socks1: ['stocking1'],
   pants1: ['skirt1'], skirt1: ['pants1'],
+  // char3 conflicts
+  onepiece3: ['topunderwear3','bottomunderwear3'],
+  topunderwear3: ['onepiece3'], bottomunderwear3: ['onepiece3'],
+  dress3: ['top3','pants3','skirt3','sweatshirt3','bunnysuitbow3'],
+  bunnysuitbow3: ['dress3','jacket3'],
+  jacket3: ['bunnysuitbow3'],
+  stocking3: ['socks3'], socks3: ['stocking3'],
+  pants3: ['skirt3'], skirt3: ['pants3'],
 };
 
 function toggleVisibility(itemId, categoryName) {
@@ -455,7 +485,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 // ===== WIND EFFECT =====
 function setWindState(on) {
   ['skirt', 'dress'].forEach(k => {
-    [1].forEach(n => {
+    [1, 3].forEach(n => {
       for (let i = 1; i <= 10; i++) {
         const normalId = `${k}${n}_${i}.png`;
         const windId   = `${k}${n}_${i}w.png`;
