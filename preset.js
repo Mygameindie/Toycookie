@@ -53,24 +53,42 @@ function showItem(itemId, categoryName) {
 
 function applyDefaultPreset() {
   hideCategories(ALL_CATEGORIES);
+  // char1
   showItem('topunderwear1_1.png', 'topunderwear1');
   showItem('bottomunderwear1_1.png', 'bottomunderwear1');
   showItem('dress1_1.png', 'dress1');
   showItem('bow1_1.png', 'bow1');
   showItem('hat1_1.png', 'hat1');
+  // char4
+  showItem('topunderwear4_1.png', 'topunderwear4');
+  showItem('bottomunderwear4_1.png', 'bottomunderwear4');
+  showItem('dress4_1.png', 'dress4');
+  showItem('bow4_1.png', 'bow4');
+  showItem('hat4_1.png', 'hat4');
 }
 
 function applyUnderwear() {
   hideCategories(ALL_CATEGORIES);
+  // char1
   showItem('topunderwear1_1.png', 'topunderwear1');
   showItem('bottomunderwear1_1.png', 'bottomunderwear1');
+  // char4
+  showItem('topunderwear4_1.png', 'topunderwear4');
+  showItem('bottomunderwear4_1.png', 'bottomunderwear4');
 }
 
 function applyBunnyPreset() {
   hideCategories(ALL_CATEGORIES);
+  // char1
   showItem('bunnysuitbow1_1.png', 'bunnysuitbow1');
   showItem('hat1_1.png', 'hat1');
   showItem('onepiece1_1.png', 'onepiece1');
   showItem('shoes1_1.png', 'shoes1');
   showItem('stocking1_1.png', 'stocking1');
+  // char4
+  showItem('bunnysuitbow4_1.png', 'bunnysuitbow4');
+  showItem('hat4_1.png', 'hat4');
+  showItem('onepiece4_1.png', 'onepiece4');
+  showItem('shoes4_1.png', 'shoes4');
+  showItem('stocking4_1.png', 'stocking4');
 }
