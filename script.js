@@ -424,6 +424,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 
       data.forEach(item => {
         const id = item.id.endsWith('.png') ? item.id : `${item.id}.png`;
+        if (document.getElementById(id)) return; // already hardcoded in HTML
         const img = new Image();
         img.id = id;
         img.src = item.src;
@@ -491,6 +492,7 @@ function setWindState(on) {
 function enterGame() {
   document.querySelector('.main-menu').style.display = 'none';
   document.querySelector('.game-container').style.display = 'flex';
+  if (typeof applyDefaults === 'function') applyDefaults();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
