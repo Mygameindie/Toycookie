@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress-Up Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <div class="main-menu">
+    <img src="Mainmenu.png" alt="Main Menu">
+    <button onclick="enterGame()">Play</button>
+  </div>
+
+  <div class="game-container">
+    <div class="stage">
+      <div class="char-wrap" id="char1" data-char="1" data-gender="girl">
+        <img class="base-img" id="base1" src="base1.png" alt="Character 1">
+        <button class="belly-btn" data-char="1"></button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button id="wind-button">🌬 Wind</button>
+    </div>
+
+    <div class="controls">
+      <div class="scroll-bar" id="presetScrollBar"></div>
+      <div class="scroll-bar" id="categoryScrollBar"></div>
+      <div class="scrollable-buttons"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="preset.js"></script>
+  <script src="scrolls.js"></script>
+  <script src="toys.js"></script>
+</body>
+</html>
