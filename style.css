@@ -145,7 +145,7 @@ body {
   height: 10%;
   top: 67%;
   left: 45%;
-  background: red;
+  background: transparent;
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -170,7 +170,7 @@ body {
   height: 8%;
   top: 58%;
   left: 40%;
-  background: red;
+  background: transparent;
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -193,7 +193,7 @@ body {
   height: 5%;
   top: 72%;
   left: 45%;
-  background: red;
+  background: transparent;
   border: none;
   outline: none;
   -webkit-appearance: none;
