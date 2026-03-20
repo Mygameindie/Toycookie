@@ -18,11 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Character 2 (boy)
     'bottomunderwear2', 'socks2', 'boxers2', 'sweatshirt2', 'shoes2',
     'pants2', 'top2', 'jacket2', 'accessories2', 'hat2', 'mask2', 'expression2',
-    // Character 4 (girl)
-    'bottomunderwear4', 'topunderwear4', 'stocking4', 'onepiece4',
-    'socks4', 'sweatshirt4', 'shoes4', 'pants4', 'skirt4',
-    'top4', 'dress4', 'jacket4', 'bunnysuitbow4',
-    'accessories4', 'hat4', 'mask4', 'bow4', 'expression4',
   ];
 
   // Build preset buttons

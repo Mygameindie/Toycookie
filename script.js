@@ -4,7 +4,6 @@
 const CHARACTER_GENDERS = {
   1: 'girl',  // char1 → girl
   2: 'boy',   // char2 → boy
-  4: 'girl',  // char4 → girl
 };
 
 // Categories shown ONLY for girl characters (hidden for boy characters)
@@ -26,12 +25,6 @@ const jsonFiles = [
   'bottomunderwear2.json', 'socks2.json', 'boxers2.json', 'sweatshirt2.json',
   'shoes2.json', 'pants2.json', 'top2.json', 'jacket2.json',
   'accessories2.json', 'hat2.json', 'mask2.json', 'expression2.json',
-  // Character 4 (girl)
-  'bottomunderwear4.json', 'topunderwear4.json', 'stocking4.json',
-  'onepiece4.json', 'socks4.json', 'sweatshirt4.json', 'shoes4.json',
-  'pants4.json', 'skirt4.json', 'skirt4w.json', 'top4.json',
-  'dress4.json', 'dress4w.json', 'jacket4.json', 'bunnysuitbow4.json',
-  'accessories4.json', 'hat4.json', 'mask4.json', 'bow4.json', 'expression4.json',
 ];
 
 const COLORS = {
@@ -209,14 +202,6 @@ const CONFLICTS = {
   // Character 2 (boy)
   pants2: ['skirt2'], skirt2: ['pants2'],
   socks2: ['stocking2'], stocking2: ['socks2'],
-  // Character 4 (girl)
-  onepiece4: ['topunderwear4','bottomunderwear4'],
-  topunderwear4: ['onepiece4'], bottomunderwear4: ['onepiece4'],
-  dress4: ['top4','pants4','skirt4','sweatshirt4','bunnysuitbow4'],
-  bunnysuitbow4: ['dress4','jacket4'],
-  jacket4: ['bunnysuitbow4'],
-  stocking4: ['socks4'], socks4: ['stocking4'],
-  pants4: ['skirt4'], skirt4: ['pants4'],
 };
 
 function toggleVisibility(itemId, categoryName) {
@@ -464,7 +449,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 // ===== WIND EFFECT =====
 function setWindState(on) {
   ['skirt', 'dress'].forEach(k => {
-    [1, 2, 4].forEach(n => {
+    [1, 2].forEach(n => {
       for (let i = 1; i <= 10; i++) {
         const normalId = `${k}${n}_${i}.png`;
         const windId   = `${k}${n}_${i}w.png`;
