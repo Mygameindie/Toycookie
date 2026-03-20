@@ -3,6 +3,9 @@
 // This controls which clothing categories appear in the scroll bar for each character.
 const CHARACTER_GENDERS = {
   1: 'girl',  // char1 → girl
+  2: 'boy',   // char2 → boy
+  3: 'girl',  // char3 → girl
+  4: 'girl',  // char4 → girl
 };
 
 // Categories shown ONLY for girl characters (hidden for boy characters)
@@ -13,27 +16,29 @@ const BOY_ONLY_CATS = ['boxers'];
 
 // ===== CONFIG =====
 const jsonFiles = [
-  'bottomunderwear1.json',
-  'topunderwear1.json',
-  'stocking1.json',
-  'onepiece1.json',
-  'socks1.json',
-  'boxers1.json',
-  'sweatshirt1.json',
-  'shoes1.json',
-  'pants1.json',
-  'skirt1.json',
-  'skirt1w.json',
-  'top1.json',
-  'dress1.json',
-  'dress1w.json',
-  'jacket1.json',
-  'bunnysuitbow1.json',
-  'accessories1.json',
-  'hat1.json',
-  'mask1.json',
-  'bow1.json',
-  'expression1.json',
+  // Character 1 (girl)
+  'bottomunderwear1.json', 'topunderwear1.json', 'stocking1.json',
+  'onepiece1.json', 'socks1.json', 'boxers1.json', 'sweatshirt1.json',
+  'shoes1.json', 'pants1.json', 'skirt1.json', 'skirt1w.json',
+  'top1.json', 'dress1.json', 'dress1w.json', 'jacket1.json',
+  'bunnysuitbow1.json', 'accessories1.json', 'hat1.json', 'mask1.json',
+  'bow1.json', 'expression1.json',
+  // Character 2 (boy)
+  'bottomunderwear2.json', 'socks2.json', 'boxers2.json', 'sweatshirt2.json',
+  'shoes2.json', 'pants2.json', 'top2.json', 'jacket2.json',
+  'accessories2.json', 'hat2.json', 'mask2.json', 'expression2.json',
+  // Character 3 (girl)
+  'bottomunderwear3.json', 'topunderwear3.json', 'stocking3.json',
+  'onepiece3.json', 'socks3.json', 'sweatshirt3.json', 'shoes3.json',
+  'pants3.json', 'skirt3.json', 'skirt3w.json', 'top3.json',
+  'dress3.json', 'dress3w.json', 'jacket3.json', 'bunnysuitbow3.json',
+  'accessories3.json', 'hat3.json', 'mask3.json', 'bow3.json', 'expression3.json',
+  // Character 4 (girl)
+  'bottomunderwear4.json', 'topunderwear4.json', 'stocking4.json',
+  'onepiece4.json', 'socks4.json', 'sweatshirt4.json', 'shoes4.json',
+  'pants4.json', 'skirt4.json', 'skirt4w.json', 'top4.json',
+  'dress4.json', 'dress4w.json', 'jacket4.json', 'bunnysuitbow4.json',
+  'accessories4.json', 'hat4.json', 'mask4.json', 'bow4.json', 'expression4.json',
 ];
 
 const COLORS = {
@@ -208,6 +213,25 @@ const CONFLICTS = {
   jacket1: ['bunnysuitbow1'],
   stocking1: ['socks1'], socks1: ['stocking1'],
   pants1: ['skirt1'], skirt1: ['pants1'],
+  // Character 2 (boy)
+  pants2: ['skirt2'], skirt2: ['pants2'],
+  socks2: ['stocking2'], stocking2: ['socks2'],
+  // Character 3 (girl)
+  onepiece3: ['topunderwear3','bottomunderwear3'],
+  topunderwear3: ['onepiece3'], bottomunderwear3: ['onepiece3'],
+  dress3: ['top3','pants3','skirt3','sweatshirt3','bunnysuitbow3'],
+  bunnysuitbow3: ['dress3','jacket3'],
+  jacket3: ['bunnysuitbow3'],
+  stocking3: ['socks3'], socks3: ['stocking3'],
+  pants3: ['skirt3'], skirt3: ['pants3'],
+  // Character 4 (girl)
+  onepiece4: ['topunderwear4','bottomunderwear4'],
+  topunderwear4: ['onepiece4'], bottomunderwear4: ['onepiece4'],
+  dress4: ['top4','pants4','skirt4','sweatshirt4','bunnysuitbow4'],
+  bunnysuitbow4: ['dress4','jacket4'],
+  jacket4: ['bunnysuitbow4'],
+  stocking4: ['socks4'], socks4: ['stocking4'],
+  pants4: ['skirt4'], skirt4: ['pants4'],
 };
 
 function toggleVisibility(itemId, categoryName) {
@@ -455,7 +479,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 // ===== WIND EFFECT =====
 function setWindState(on) {
   ['skirt', 'dress'].forEach(k => {
-    [1].forEach(n => {
+    [1, 2, 3, 4].forEach(n => {
       for (let i = 1; i <= 10; i++) {
         const normalId = `${k}${n}_${i}.png`;
         const windId   = `${k}${n}_${i}w.png`;

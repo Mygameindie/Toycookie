@@ -116,10 +116,11 @@ body {
   will-change: transform;
 }
 
-/* Default starting positions: left / center / right */
-#char1 { left: 2%; top: 0; }
-#char2 { left: 36%; top: 0; }
-#char3 { left: 70%; top: 0; }
+/* Default starting positions: spread across 4 characters */
+#char1 { left: 1%;  top: 0; }
+#char2 { left: 25%; top: 0; }
+#char3 { left: 49%; top: 0; }
+#char4 { left: 73%; top: 0; }
 
 .char-wrap.dragging {
   cursor: grabbing;
@@ -431,9 +432,10 @@ body {
     height: 60vw;
   }
 
-  #char1 { left: 1%; }
-  #char2 { left: 35%; }
-  #char3 { left: 69%; }
+  #char1 { left: 1%;  }
+  #char2 { left: 25%; }
+  #char3 { left: 49%; }
+  #char4 { left: 73%; }
 
   .color-grid { grid-template-columns: repeat(4, 1fr); }
   .color-button { width: 36px; height: 36px; }
