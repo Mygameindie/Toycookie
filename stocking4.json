@@ -1,0 +1,62 @@
+[
+    {
+        "id": "stocking4_1",
+        "src": "stocking4_1.png",
+        "alt": "Stocking 4 Item 1",
+        "visibility": "visible"
+    },
+    {
+        "id": "stocking4_2",
+        "src": "stocking4_2.png",
+        "alt": "Stocking 4 Item 2",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_3",
+        "src": "stocking4_3.png",
+        "alt": "Stocking 4 Item 3",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_4",
+        "src": "stocking4_4.png",
+        "alt": "Stocking 4 Item 4",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_5",
+        "src": "stocking4_5.png",
+        "alt": "Stocking 4 Item 5",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_6",
+        "src": "stocking4_6.png",
+        "alt": "Stocking 4 Item 6",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_7",
+        "src": "stocking4_7.png",
+        "alt": "Stocking 4 Item 7",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_8",
+        "src": "stocking4_8.png",
+        "alt": "Stocking 4 Item 8",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_9",
+        "src": "stocking4_9.png",
+        "alt": "Stocking 4 Item 9",
+        "visibility": "hidden"
+    },
+    {
+        "id": "stocking4_10",
+        "src": "stocking4_10.png",
+        "alt": "Stocking 4 Item 10",
+        "visibility": "hidden"
+    }
+]
