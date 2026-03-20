@@ -4,7 +4,6 @@
 const CHARACTER_GENDERS = {
   1: 'girl',  // char1 → girl
   2: 'boy',   // char2 → boy
-  3: 'girl',  // char3 → girl
   4: 'girl',  // char4 → girl
 };
 
@@ -27,12 +26,6 @@ const jsonFiles = [
   'bottomunderwear2.json', 'socks2.json', 'boxers2.json', 'sweatshirt2.json',
   'shoes2.json', 'pants2.json', 'top2.json', 'jacket2.json',
   'accessories2.json', 'hat2.json', 'mask2.json', 'expression2.json',
-  // Character 3 (girl)
-  'bottomunderwear3.json', 'topunderwear3.json', 'stocking3.json',
-  'onepiece3.json', 'socks3.json', 'sweatshirt3.json', 'shoes3.json',
-  'pants3.json', 'skirt3.json', 'skirt3w.json', 'top3.json',
-  'dress3.json', 'dress3w.json', 'jacket3.json', 'bunnysuitbow3.json',
-  'accessories3.json', 'hat3.json', 'mask3.json', 'bow3.json', 'expression3.json',
   // Character 4 (girl)
   'bottomunderwear4.json', 'topunderwear4.json', 'stocking4.json',
   'onepiece4.json', 'socks4.json', 'sweatshirt4.json', 'shoes4.json',
@@ -216,14 +209,6 @@ const CONFLICTS = {
   // Character 2 (boy)
   pants2: ['skirt2'], skirt2: ['pants2'],
   socks2: ['stocking2'], stocking2: ['socks2'],
-  // Character 3 (girl)
-  onepiece3: ['topunderwear3','bottomunderwear3'],
-  topunderwear3: ['onepiece3'], bottomunderwear3: ['onepiece3'],
-  dress3: ['top3','pants3','skirt3','sweatshirt3','bunnysuitbow3'],
-  bunnysuitbow3: ['dress3','jacket3'],
-  jacket3: ['bunnysuitbow3'],
-  stocking3: ['socks3'], socks3: ['stocking3'],
-  pants3: ['skirt3'], skirt3: ['pants3'],
   // Character 4 (girl)
   onepiece4: ['topunderwear4','bottomunderwear4'],
   topunderwear4: ['onepiece4'], bottomunderwear4: ['onepiece4'],
@@ -479,7 +464,7 @@ async function loadItems(batchSize = 5, delay = 50) {
 // ===== WIND EFFECT =====
 function setWindState(on) {
   ['skirt', 'dress'].forEach(k => {
-    [1, 2, 3, 4].forEach(n => {
+    [1, 2, 4].forEach(n => {
       for (let i = 1; i <= 10; i++) {
         const normalId = `${k}${n}_${i}.png`;
         const windId   = `${k}${n}_${i}w.png`;

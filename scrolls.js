@@ -18,11 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Character 2 (boy)
     'bottomunderwear2', 'socks2', 'boxers2', 'sweatshirt2', 'shoes2',
     'pants2', 'top2', 'jacket2', 'accessories2', 'hat2', 'mask2', 'expression2',
-    // Character 3 (girl)
-    'bottomunderwear3', 'topunderwear3', 'stocking3', 'onepiece3',
-    'socks3', 'sweatshirt3', 'shoes3', 'pants3', 'skirt3',
-    'top3', 'dress3', 'jacket3', 'bunnysuitbow3',
-    'accessories3', 'hat3', 'mask3', 'bow3', 'expression3',
     // Character 4 (girl)
     'bottomunderwear4', 'topunderwear4', 'stocking4', 'onepiece4',
     'socks4', 'sweatshirt4', 'shoes4', 'pants4', 'skirt4',
